@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+body{
+	/*전체 홈페이지문서 보이는 영역 전체 설정*/
+	background-color: #f4f8f6; /*3의 배수가 안전한 색*/
+	font-family: sans-serif;
+}
+
+h1 {
+	color: #267557; 
+}
+
+.card {
+	padding: 24px;
+	background: white;
+	border: 1px solid #e5e5e5;
+	border-radius: 18px;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
