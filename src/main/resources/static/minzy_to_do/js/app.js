@@ -27,7 +27,13 @@ helloButton.addEventListener("click", sayHello);
 
 // 섹션 12 예제
 // 1. 컬러 배열 선언
-const buttonColor = ["pink", "green", "yellow", "white", "red"];
+const buttonColor = [
+	"pink", 
+	"green", 
+	"yellow", 
+	"white", 
+	"red"
+];
 
 // 2. HTML 태그 button1~3 찾기
 const button1 = document.querySelector("#button1")
@@ -52,6 +58,7 @@ function button3Click(){
 function button4Click(){
 	alert("버튼4이 눌려짐" + buttonColor[3]);
 }
+
 function button5Click(){
 	alert("버튼5이 눌려짐" + buttonColor[4]);
 }
@@ -64,7 +71,15 @@ button3.addEventListener("click", button3Click);
 button4.addEventListener("click", button4Click);
 button5.addEventListener("click", button5Click);
 
-
+/*  이런 식으로도 배열이 만들어진다
+const task = {
+	title: "자바 첫걸음"
+	publisher: "한빛미대"
+	fun:showinfo
+};
+task["title"]
+task["publisher"]
+*/
 
 
 
