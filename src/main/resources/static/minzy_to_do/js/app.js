@@ -18,6 +18,45 @@ function sayHello() {
 	alert("안녕하세요");
 }
 
+// toList 제어하기
+// 1. 추가 버튼 찾기
+const addButton = 
+	document.querySelector("#addButton");
+
+// 2. #addButton 요소를 눌렀는가
+addButton.addEventListener("click", function(){
+	
+	// 3. 입력창에서 글자 가져오기
+	const input = document.querySelector("#taskInput");
+	// alert("입력내용 : " + input.value);
+	
+	// 3.5 입력창에 값이 비었으면 li추가 취소
+	if(input.value.trim() ==="") {
+		alert("글자를 적고 버튼을 누르시오");
+		return;
+	}
+	
+	// 4. ul에 추가할 내용을 등록하기 위해
+	//	  li태그 필요. 자바스크립트로 새로 만들어야 함
+	const item = document.createElement("li");
+
+	// 5. li item에 input값을 저장
+	item.textContent = input.value;
+	
+	// 6. dom으로 "#taskList" ul요소를 찾기
+	const taskList = document.querySelector("#taskList");
+	taskList.append(item);
+	
+	// 6.5 할 일 완료표시 넣기(취소선 넣기)
+	// 아이템 리스트를 마우스로 클릭하는 경우
+	item.addEventListener("click", function() {
+		item.style.textDecoration = "line-through";
+	});
+	
+	// 7. 새로 li에 값이 추가되고 나면
+	// input 태그 값 초기화
+	input.value = "";
+});
 
 // html객체와 이벤트(실제 마우스 누름 같은 click이라고함)
 // 이벤트 연결등록 그러면 이벤트를 감시하다.
@@ -25,61 +64,6 @@ function sayHello() {
 helloButton.addEventListener("click", sayHello);
 
 
-// 섹션 12 예제
-// 1. 컬러 배열 선언
-const buttonColor = [
-	"pink", 
-	"green", 
-	"yellow", 
-	"white", 
-	"red"
-];
-
-// 2. HTML 태그 button1~3 찾기
-const button1 = document.querySelector("#button1")
-const button2 = document.querySelector("#button2")
-const button3 = document.querySelector("#button3")
-const button4 = document.querySelector("#button4")
-const button5 = document.querySelector("#button5")
-
-// 3. 버튼 누르면 처리(실행)할 함수정의
-function button1Click(){
-	alert("버튼1이 눌려짐" + buttonColor[0]);
-}
-
-function button2Click(){
-	alert("버튼2이 눌려짐" + buttonColor[1]);
-}
-
-function button3Click(){
-	alert("버튼3이 눌려짐" + buttonColor[2]);
-}
-
-function button4Click(){
-	alert("버튼4이 눌려짐" + buttonColor[3]);
-}
-
-function button5Click(){
-	alert("버튼5이 눌려짐" + buttonColor[4]);
-}
-
-// 4. 이벤트(click)가 발생하면 처리할 함수가
-//		실행되도록 모니터 예약 등록
-button1.addEventListener("click", button1Click);
-button2.addEventListener("click", button2Click);
-button3.addEventListener("click", button3Click);
-button4.addEventListener("click", button4Click);
-button5.addEventListener("click", button5Click);
-
-/*  이런 식으로도 배열이 만들어진다
-const task = {
-	title: "자바 첫걸음"
-	publisher: "한빛미대"
-	fun:showinfo
-};
-task["title"]
-task["publisher"]
-*/
 
 
 
