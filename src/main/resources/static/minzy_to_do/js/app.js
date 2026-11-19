@@ -155,6 +155,14 @@ function deleteFortune(){
 helloButton.addEventListener("click", sayHello);
 
 
+// index2.html 의 js
+const resetButton = 
+	document.querySelector("#resetButton");
 
+function resetButton_click() {
+	alert("리셋되었습니다.");
+}
 
-
+// resetButton 태그와 resetButton_click 을 연결해주는 걸
+// 이벤트 핸들러라고 한다
+resetButton.addEventListener("click", resetButton_click);

@@ -22,3 +22,16 @@ li:hover {
 	background: #ff00ff;
 }
 
+/*index2.html css*/
+.highlight{
+	background-color: #00ff00;
+	color: pink;
+}
+
+#emph{
+	color: red;
+	font-size: 30px
+}
+
+
+
