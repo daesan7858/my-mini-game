@@ -1,55 +1,30 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
-	<meta charset="UTF-8">
-	<title>Insert title here</title>
-	<link rel="stylesheet" href="/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘의 나의 활동 기록</title>
+	<link rel="stylesheet" href="css/style.css">   
 </head>
 <body>
-	<!-- 민지의 할 일 관리 페이지로 보내주세요 -->
-	<p>
-		<!-- 
-			다른 홈페이지 문서로 이동하기
-			<a href="이동할 문서 또는 주소">이동할 페이지 캡션</a>
-		 -->
-		<h2>
-			<a href="./minzy_to_do/index.html">민지의 할 일 관리</a>
-			<br>
-			<a href="minzy_to_do/index2.html">HTML 연습</a>
-		</h2>
-	</p>
-	<hr>
-	
-	<!-- 헤더 -->
-	<header>
-		<h1>보물찾기 게임</h1>
-		<p>숨겨진 보물을 찾아보세요!</p>
+	<!-- 나의 라이프 대시보드 블럭 -->
+	<header class="topbar">
+		<!-- 가운데 큰 글자로 나의 라이프 대시보드 제목출력 -->
+		<div class="page">
+			<p class="eyebrow">MY DAILY SPACE</p>
+			<h1>나의 라이프 대시보드</h1>
+			<p class="subtitle">오늘 해야 할 일을 차근차근 완성해 봐요.</p>
+		</div>
+		<div class="today-box">
+			<span class="today-label">TODAY</span>
+			<span id="todayDate">2026년 11월 23일</span>
+		</div>
 	</header>
-	
-	<!-- 메인 -->
 	<main>
-		<section>
-			<label for="playerName">플레이어 이름</label>
-			<input id="playerName" type="text" placeholder="이름을 입력하세요">
-			<button>확인</button>
-			
-			<h2 class="game-card">게임 안내</h2>
-			<p id=score>버튼을 눌러 게임을 시작합니다.</p>
-			<button>시작하기</button>
-		</section>
 	</main>
 	
-	<!-- 푸터 -->
 	<footer>
-		<p>나의 첫 웹 게임</p>
-		<article class="game-card">
-			<h2>클릭 점수 게임</h2>
-			<p>버튼을 눌러 점수를 모아보세요.</p>
-			<button>게임 시작</button>
-		</article>
 	</footer>
-	
-	<script src="/js/game.js"></script>
+
 </body>
 </html>
