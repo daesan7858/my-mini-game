@@ -33,7 +33,16 @@ body{
 		),
 		var(--background);
 }
-
+/* 전체 헤더 영역 */
+.topbar{
+	display: flex; /* 둘러싸인 topbar 안의 영역들을 유연하게
+						배치하라(주로 가로 또는 세로 영역)
+					*/
+	justify-content: space-between;  /* 내용물을 균등정렬 */
+	align-items: center;
+	gap: 24px;
+	padding: 48px 0 30px;
+}
 /* 왼쪽 상단 좌측 헤더 */
 .page {
 	width: min(1120px, calc(100% - 40px));
@@ -79,3 +88,50 @@ body{
 	font-weight: bolder;
 	
 }
+
+/* main의 첫번째 패널*/
+.focus-panel {
+	display: flex;
+	justify-content: space-between; /* 표시내용들 좌우에 여백 */
+	align-items: center;
+	gap: 20px;
+	padding: 28px 32px;
+	border-radius: 22px;
+	color: white;
+	background: linear-gradient(115deg, #287a5b, #459b75);
+	box-shadow: 0 14px 35px rgba(40, 122, 91, .15);
+}
+
+/* .focus-panel 안의 .eyebrow selector 에 적용 */
+.focus-panel .eyebrow {
+	color: #c8ead8;
+}
+
+/* .focus-panel 안의 h2 에 적용 */
+.focus-panel h2 {
+	margin-bottom: 8px;
+	font-size: clamp(20px, 3vw, 26px); /* 화면에 맞춰서 20~26px 사이로 맞춰라*/
+	letter-spacing: -.8px;
+}
+
+.focus-mark{
+	
+}
+
+
+
+/* footer 영역 꾸미기 */
+footer{ 
+	/* main 영역과 여백 주기
+	   컬러색상을 #9aa69f
+	   텍스트 가운데 정렬
+	   font-size 는 12px */
+	padding: 28px 0 35px;
+	color: #9aa69f;
+	text-align: center;
+	font-size: 12px;
+}
+
+
+
+
