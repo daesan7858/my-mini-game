@@ -114,9 +114,44 @@ body{
 	letter-spacing: -.8px;
 }
 
+/* .focus-panel/p/last-child 속성 설정 */
+.focus-panel p:last-child {
+	margin-bottom: 8px;
+	color: #e1f2ef;
+	font-size: 14px;
+}
+
 .focus-mark{
+	display: grid;
+	flex: 0 0 62px;
+	width: 62px;
+	height: 62px;
+	place-items: center;
+	border: 1px solid rgba(255, 255, 255, .45);
+	border-radius: 50%;
+	color: white;
+	font-size: 30px;
+}
+
+/* 오늘의 할 일 영역 */
+.summary-grid{
 	
 }
+.summary-card{
+	
+}
+.summary-label{
+	
+}
+#totalCount{
+	
+}
+.summary-unit{
+	
+}
+
+
+
 
 
 
